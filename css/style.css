@@ -1,0 +1,28 @@
+/* CSS Document */
+article.col-sm-10, nav.col-sm-2 {
+        line-height: 100px;
+      }
+      #brand{
+        border: 3px solid black;
+        background-color: grey;
+      }
+      section{
+        border: 3px solid black;
+        background-color: white;
+      }
+      article{
+        
+        background-color: white;        
+      }
+      aside{
+        border: 3px solid black;
+        background-color: yellow;
+      }
+      nav{
+        border: 3px solid black;
+        background-color: blue;
+      }
+      #photos *, #game * {
+        padding-top:1%;
+        padding-bottom:1%;        
+      } 
