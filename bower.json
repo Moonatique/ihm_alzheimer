@@ -1,0 +1,16 @@
+{
+  "name": "ihm_alzheimer",
+  "description": "Study project in IHM course",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Moonatique/ihm_alzheimer",
+  "private": false,
+  "dependencies": {
+    "angular": "1.3.x",
+    "angular-mocks": "1.3.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "angular-route": "1.3.x",
+    "angular-resource": "1.3.x",
+    "angular-animate": "1.3.x"
+  }
+}
