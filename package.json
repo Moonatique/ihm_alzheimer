@@ -1,9 +1,10 @@
 {
-  "version": "0.0.1",
-  "private": false,
-  "name": "ihm_alzheimer",
-  "description": "Study project in IHM course",
-  "repository": "https://github.com/Moonatique/ihm_alzheimer",
+  "version": "0.0.0",
+  "private": true,
+  "name": "angular-phonecat",
+  "description": "A tutorial application for AngularJS",
+  "repository": "https://github.com/angular/angular-phonecat",
+  "license": "MIT",
   "devDependencies": {
     "karma": "^0.12.16",
     "karma-chrome-launcher": "^0.1.4",
