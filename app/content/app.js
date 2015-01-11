@@ -9,7 +9,8 @@ var phonecatApp = angular.module('ihmAlzheimerApp', [
   'phonecatFilters',
   'phonecatServices',
   'ihm_alzheimer_services',
-  'utilFilters'
+  'utilFilters',
+  'ui.bootstrap'
 ]);
 
 phonecatApp.config(['$routeProvider',
@@ -29,7 +30,7 @@ phonecatApp.config(['$routeProvider',
             }).
             when('/albums',{
                 templateUrl: 'content/album/album.html',
-                controller: 'PhoneDetailCtrl'
+                controller: 'AlbumCtrl'
             }).
             otherwise({
                 redirectTo: '/'

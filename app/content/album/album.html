@@ -1,33 +1,26 @@
-<div class="container">
+<div class="container-fluid">
     <nav id="bannerAlbum" class="navbar navbar-default row">
-        <a class="navbar-brand col-md-2 icons" href="#">
+        <a class="navbar-brand col-md-2 icons" href="#/menu" role="button">
             <img src="img/home.jpg" class="img-thumbnail" alt="jeuFamille">
         </a>
-        <a class="navbar-brand col-md-2 icons paintBrush" href="#">
+        <a class="navbar-brand col-md-2 icons paintBrush" ng-click="changeState('drawMode')" href="#/albums" ng-hide="currentState==='treeMode'">
             <img src="img/paintbrush.png" class="img-thumbnail" alt="jeuFamille">
         </a>
-        <a class="navbar-brand col-md-2 icons" href="#">
+        <a class="navbar-brand col-md-2 icons" href="#/albums" ng-hide="currentState==='drawMode'" ng-click="changeState('treeMode')">
             <img src="img/family_tree.png" class="img-thumbnail" alt="jeuFamille">
         </a>
-        <!-- <h1 id="albumTitle" class="text-center col-md-6"><strong>Vacances</strong> -->
-        <div class="navbar-brand panel col-md-6" >
-            <a class="sticker" href="#">
-                <img src="img/mustache.png" class="img-thumbnail" alt="mustache">
-            </a>
-        </div>
-        </h1>
+        <h1 id="albumTitle" class="text-center col-md-6" ng-class="{'col-md-3':currentState==='drawMode', 'col-md-6':currentState!=='drawMode'}"><strong>Vacances</strong></h1>
+
+        
     </nav>
 
-    <section row>
-        <div ng-controller="CarouselDemoCtrl">
-            <div style="height: 305px">
+    <section row ng-hide="currentState==='treeMode'">
+        <div>
+            <div class="col-md-12" style="height: 30%">
                 <carousel interval="myInterval">
                     <slide ng-repeat="slide in slides" active="slide.active">
                         <img ng-src="{{slide.image}}" style="margin:auto;">
-                        <div class="carousel-caption">
-                            <h4>Slide {{$index}}</h4>
-                            <p>{{slide.text}}</p>
-                        </div>
+                        
                     </slide>
                 </carousel>
             </div>
