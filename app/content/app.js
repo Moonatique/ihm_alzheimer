@@ -8,7 +8,8 @@ var phonecatApp = angular.module('ihmAlzheimerApp', [
   'phonecatControllers',
   'phonecatFilters',
   'phonecatServices',
-  'ihm_alzheimer_services'
+  'ihm_alzheimer_services',
+  'utilFilters'
 ]);
 
 phonecatApp.config(['$routeProvider',

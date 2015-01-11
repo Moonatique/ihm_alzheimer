@@ -1,50 +1,50 @@
 [
     {
-        "id": "album1",
+        "id": "albums",
         "imageUrl": "img/family.jpg",
-        "title": "Vacances",
+        "title": "Petits Enfants",
         "description": "familyPhoto"
     },
     {
         "id": "album1",
         "imageUrl": "img/family.jpg",
-        "title": "Vacances",
+        "title": "Vacances a Rome",
         "description": "familyPhoto"
     },
     {
         "id": "album1",
         "imageUrl": "img/family.jpg",
-        "title": "Vacances",
+        "title": "Mariage",
         "description": "familyPhoto"
     },
     {
         "id": "album1",
         "imageUrl": "img/family.jpg",
-        "title": "Vacances",
+        "title": "Mariage de marine",
         "description": "familyPhoto"
     },
     {
         "id": "album1",
         "imageUrl": "img/family.jpg",
-        "title": "Vacances",
+        "title": "Noel 2000",
         "description": "familyPhoto"
     },
     {
         "id": "album1",
         "imageUrl": "img/family.jpg",
-        "title": "Vacances",
+        "title": "Anniversaire Jean",
         "description": "familyPhoto"
     },
     {
         "id": "album1",
         "imageUrl": "img/family.jpg",
-        "title": "Vacances",
+        "title": "Repas de famille Mars",
         "description": "familyPhoto"
     },
     {
         "id": "album1",
         "imageUrl": "img/family.jpg",
-        "title": "Vacances",
+        "title": "Zoo",
         "description": "familyPhoto"
     }
 ]
