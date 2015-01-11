@@ -1,0 +1,37 @@
+<div class="container">
+    <nav id="bannerAlbum" class="navbar navbar-default row">
+        <a class="navbar-brand col-md-2 icons" href="#">
+            <img src="img/home.jpg" class="img-thumbnail" alt="jeuFamille">
+        </a>
+        <a class="navbar-brand col-md-2 icons paintBrush" href="#">
+            <img src="img/paintbrush.png" class="img-thumbnail" alt="jeuFamille">
+        </a>
+        <a class="navbar-brand col-md-2 icons" href="#">
+            <img src="img/family_tree.png" class="img-thumbnail" alt="jeuFamille">
+        </a>
+        <!-- <h1 id="albumTitle" class="text-center col-md-6"><strong>Vacances</strong> -->
+        <div class="navbar-brand panel col-md-6" >
+            <a class="sticker" href="#">
+                <img src="img/mustache.png" class="img-thumbnail" alt="mustache">
+            </a>
+        </div>
+        </h1>
+    </nav>
+
+    <section row>
+        <div ng-controller="CarouselDemoCtrl">
+            <div style="height: 305px">
+                <carousel interval="myInterval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{$index}}</h4>
+                            <p>{{slide.text}}</p>
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </section>
+
+</div>
