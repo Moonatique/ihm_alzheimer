@@ -24,4 +24,8 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope) {
     }
   }
 
+
+
+  
+
 });

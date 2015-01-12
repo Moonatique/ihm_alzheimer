@@ -1,14 +1,17 @@
 <div class="container">
     <nav id="bannerMenu" class="navbar navbar-default row">
-        <a class="navbar-brand col-md-2" href="#/albums">
+        <a class="navbar-brand col-sm-2" href="#/albums">
             <img src="img/dices.jpg" class="img-thumbnail" alt="aleatoire">
         </a>
-        <!--<h1 id="dayDate" class="text-center col-md-9"><strong>{{currentDate | date : 'EEEE dd MMMM yyyy, HH:mm' : 'UTC+1'}}</strong>-->
-        <h1 id="dayDate" class="text-center col-md-9"><strong>{{currentDate | dateFR}}</strong>
+        <h1 id="dayDate" class="text-center col-sm-9"><strong>{{currentDate | dateFR}}</strong>
         </h1>
+
+       
+
+
     </nav>
     <div class="row">
-        <div class="col-md-3" id="menuItem" ng-repeat="album in albums">
+        <div class="col-sm-3" id="menuItem" ng-repeat="album in albums">
             <div class="thumbnail">
                 <a href="#albums">
                     <img ng-src="{{album.imageUrl}}" alt="{{album.description}}">
