@@ -97,9 +97,6 @@ ul.specs dt {
 
 
 /* CSS Document */
-article.col-sm-10, nav.col-sm-2 {
-        line-height: 100px;
-      }
       #bannerMenu{
         height: 140px;
       }
@@ -123,13 +120,16 @@ article.col-sm-10, nav.col-sm-2 {
       #albumTitle{
         height: auto;
       }
-      .panel{
-         height: 65px;
-         margin:1%;
-         padding: 1%;
-      }
       .sticker{
-        
+        width: auto;
+        height: 100%;
+        margin : 0%;
+        padding: 1%;
+
+      }
+      .panel{
+        height: auto;
+        margin: 1%;
       }
       #bannerAlbum > a{
         height: 90%;
