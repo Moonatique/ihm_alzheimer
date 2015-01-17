@@ -24,8 +24,14 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope) {
     }
   }
 
+  $( ".draggable" ).draggable({ revert: "invalid" });
+  $( ".droppable" ).droppable({
 
+  });
 
+  $scope.clickImage = function(){
+    $( "#firstIcon" ).css("background-color", "red");
+  }
   
 
 });

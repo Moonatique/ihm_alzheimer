@@ -1,52 +1,50 @@
 <div class="container">
     <nav id="bannerAlbum" class="navbar navbar-default row">
-        <a class="navbar-brand col-md-2 icons" href="#/menu" role="button">
+        <a class="navbar-brand col-sm-2 icons" href="#/menu" role="button">
             <img src="img/home.jpg" class="img-thumbnail" alt="jeuFamille">
         </a>
-        <a class="navbar-brand col-md-2 icons paintBrush" ng-click="changeState('drawMode')" href="#/albums" ng-hide="currentState==='treeMode'">
+        <a class="navbar-brand col-sm-2 icons paintBrush" ng-click="changeState('drawMode')" href="#/albums" ng-hide="currentState==='treeMode'">
             <img src="img/paintbrush.png" class="img-thumbnail" alt="jeuFamille">
         </a>
-        <a class="navbar-brand col-md-2 icons" href="#/albums" ng-hide="currentState==='drawMode'" ng-click="changeState('treeMode')">
+        <a class="navbar-brand col-sm-2 icons" href="#/albums" ng-hide="currentState==='drawMode'" ng-click="changeState('treeMode')">
             <img src="img/family_tree.png" class="img-thumbnail" alt="jeuFamille">
         </a>
 
-        <div class="panel panel-primary col-md-7" ng-show="currentState==='drawMode'">
+        <div class="panel panel-primary col-sm-7" ng-show="currentState==='drawMode'">
             
-            <a class="navbar-brand col-md-1 sticker" href="#/albums" >
-                <img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
-            </a>
-            <a class="navbar-brand col-md-1 sticker" href="#/albums" >
+            <a id="firstIcon" nb-click="clickImage" class="navbar-brand col-sm-1 sticker draggable" href="#/albums" >
+                <img  src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
+            </a> 
+            <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
                 <img src="img/red nose.png" class="img-thumbnail" alt="jeuFamille">
             </a>
-            <a class="navbar-brand col-md-1 sticker" href="#/albums" >
+            <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
                 <img src="img/hat.png" class="img-thumbnail" alt="jeuFamille">
             </a>
-            <a class="navbar-brand col-md-1 sticker" href="#/albums" >
+            <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
                 <img src="img/party hat.png" class="img-thumbnail" alt="jeuFamille">
             </a>
-            <a class="navbar-brand col-md-1 sticker" href="#/albums" >
+            <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
                 <img src="img/lunette2.png" class="img-thumbnail" alt="jeuFamille">
             </a>
 
-            <div class="panel panel-primary col-md-offset-3 col-md-4" >
-                <a class="navbar-brand col-md-1 sticker" href="#/albums" >
+            <div class="panel panel-primary col-sm-offset-3 col-sm-4" >
+                <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
                     <img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
                 </a>
-                <a class="navbar-brand col-md-1 sticker" href="#/albums" >
+                <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
                     <img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
                 </a>
             </div>
         </div>
 
-        <h1 id="albumTitle" class="text-center col-md-2" ng-class="{'col-md-3':currentState==='drawMode', 'col-md-6':currentState!=='drawMode'}"><strong>Vacances</strong></h1>
-
-
+        <h1 id="albumTitle" class="text-center col-sm-2" ng-class="{'col-sm-3':currentState==='drawMode', 'col-sm-6':currentState!=='drawMode'}"><strong>Vacances</strong></h1>
         
     </nav>
 
-    <section row ng-hide="currentState==='treeMode'">
+    <section row ng-hide="currentState!=='displayMode'">
         <div>
-            <div class="col-md-12" style="height: 30%">
+            <div class="col-sm-12" style="height: 30%">
                 <carousel interval="myInterval">
                     <slide ng-repeat="slide in slides" active="slide.active">
                         <img ng-src="{{slide.image}}" style="margin:auto;">
@@ -56,5 +54,28 @@
             </div>
         </div>
     </section>
+
+    <section row ng-hide="currentState!=='drawMode'" >
+        
+            <div id="drawingImage" class="col-sm-12 droppable">
+                <img src="img/family.jpg">
+            </div>
+
+    </section>
+
+    <section row ng-hide="currentState!=='treeMode'">
+        <div>
+            <div class="col-sm-12" style="height: 30%">
+                <carousel interval="myInterval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </section>
+
+
 
 </div>
