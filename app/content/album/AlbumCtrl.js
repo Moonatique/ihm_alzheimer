@@ -1,4 +1,4 @@
-angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Sticker) {
+angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Sticker, Album, $routeParams) {
   $scope.myInterval = 0;
   var slides = $scope.slides = [];
   $scope.addSlide = function() {
@@ -36,6 +36,12 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
   $scope.clickImage = function(){
     $( "#firstIcon" ).css("background-color", "red");
   }
+
+  $scope.albums = Album.query(function(albums){
+    $scope.album = albums[$routeParams.albumId-1];
+  });
+
+
   
 
 });

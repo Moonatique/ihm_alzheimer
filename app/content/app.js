@@ -28,7 +28,7 @@ phonecatApp.config(['$routeProvider',
                 templateUrl: 'content/menu/menu.html',
                 controller: 'MenuCtrl'
             }).
-            when('/albums',{
+            when('/albums/:albumId',{
                 templateUrl: 'content/album/album.html',
                 controller: 'AlbumCtrl'
             }).
