@@ -108,6 +108,10 @@ ul.specs dt {
       #menuItem a{
         text-decoration: none;
       }
+    #menuItem img{
+        padding:0px;
+        height: 50%;
+    }
       .icons{
         width: 6%;
         height: auto;
@@ -115,7 +119,7 @@ ul.specs dt {
         margin: 1%;
       }
       #bannerAlbum{
-        height: auto;
+        height: 25%;
       }
       #albumTitle{
         height: auto;
@@ -144,3 +148,8 @@ ul.specs dt {
       .draggable { z-index: 1000; }
 
       .droppable { }
+
+      #controlDraw{
+          margin:0px;
+          padding:0px;
+      }

@@ -8,4 +8,10 @@ services.factory('Album', ['$resource',
         return $resource('albums/:albumId.json', {}, {
             query: {method:'GET', params:{albumId:'albums'}, isArray:true}
         });
+    }])
+.factory('Sticker', ['$resource',
+    function($resource){
+        return $resource('stickers/:stickerId.json', {}, {
+            query: {method:'GET', params:{stickerId:'stickers'}, isArray:true}
+        });
     }]);

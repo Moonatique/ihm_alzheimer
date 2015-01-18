@@ -10,33 +10,22 @@
             <img src="img/family_tree.png" class="img-thumbnail" alt="jeuFamille">
         </a>
 
-        <div class="panel panel-primary col-sm-7" ng-show="currentState==='drawMode'">
-            
-            <a id="firstIcon" nb-click="clickImage" class="navbar-brand col-sm-1 sticker draggable" href="#/albums" >
-                <img  src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
-            </a> 
-            <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
-                <img src="img/red nose.png" class="img-thumbnail" alt="jeuFamille">
-            </a>
-            <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
-                <img src="img/hat.png" class="img-thumbnail" alt="jeuFamille">
-            </a>
-            <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
-                <img src="img/party hat.png" class="img-thumbnail" alt="jeuFamille">
-            </a>
-            <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
-                <img src="img/lunette2.png" class="img-thumbnail" alt="jeuFamille">
-            </a>
-
-            <div class="panel panel-primary col-sm-offset-3 col-sm-4" >
-                <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
-                    <img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
-                </a>
-                <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
-                    <img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
+        <div class="panel panel-primary col-sm-7" ng-show="currentState==='drawMode'" >
+            <div ng-repeat="sticker in stickers">
+                <a id="{{sticker.id}}" class="navbar-brand col-sm-1 sticker draggable" href="#/albums" >
+                    <img  src="{{sticker.url}}" class="img-thumbnail" alt="jeuFamille">
                 </a>
             </div>
+            <!--<div class="panel panel-primary col-sm-offset-2 col-sm-3"  id="controlDraw">-->
+                <a class="navbar-brand col-sm-1 col-sm-offset-2 sticker" href="#/albums" >
+                    <img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
+                </a>
+                <a class="navbar-brand col-sm-1 sticker" href="#/albums" >
+                    <img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
+                </a>
+            <!--</div>-->
         </div>
+
 
         <h1 id="albumTitle" class="text-center col-sm-2" ng-class="{'col-sm-3':currentState==='drawMode', 'col-sm-6':currentState!=='drawMode'}"><strong>Vacances</strong></h1>
         

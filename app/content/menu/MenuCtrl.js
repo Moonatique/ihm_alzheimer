@@ -5,6 +5,5 @@ angular.module('ihmAlzheimerApp').
     controller('MenuCtrl', ['$scope', 'Album',
         function($scope, Album) {
             $scope.albums = Album.query();
-            $scope.application = 'toto';
             $scope.currentDate = new Date();
         }]);

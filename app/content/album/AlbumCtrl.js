@@ -1,4 +1,4 @@
-angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope) {
+angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Sticker) {
   $scope.myInterval = 0;
   var slides = $scope.slides = [];
   $scope.addSlide = function() {
@@ -12,7 +12,7 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope) {
   for (var i=0; i<4; i++) {
     $scope.addSlide();
   }
-
+  $scope.stickers = Sticker.query();
   $scope.currentState = 'displayMode';
   $scope.changeState = function(state){
 
@@ -20,14 +20,18 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope) {
       $scope.currentState = 'displayMode';
     }
     else{
-      $scope.currentState = state; 
+      $scope.currentState = state;
+        switch(state){
+            case 'drawMode':
+                $( ".draggable" ).draggable({ revert: "invalid" });
+                $( ".droppable" ).droppable({
+
+                });
+            break;
+        }
     }
   }
 
-  $( ".draggable" ).draggable({ revert: "invalid" });
-  $( ".droppable" ).droppable({
-
-  });
 
   $scope.clickImage = function(){
     $( "#firstIcon" ).css("background-color", "red");

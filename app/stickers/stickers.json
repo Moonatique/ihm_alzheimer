@@ -1,0 +1,22 @@
+[
+    {
+        "id" : "firstIcon",
+        "url": "img/mustache.png"
+    },
+    {
+        "id" : "secondIcon",
+        "url": "img/redNose.png"
+    },
+    {
+        "id" : "thirdIcon",
+        "url": "img/hat.png"
+    },
+    {
+        "id" : "fourthIcon",
+        "url": "img/party hat.png"
+    },
+    {
+        "id" : "fifthIcon",
+        "url": "img/lunette2.png"
+    }
+]
