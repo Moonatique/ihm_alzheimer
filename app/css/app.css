@@ -153,3 +153,15 @@ ul.specs dt {
           margin:0px;
           padding:0px;
       }
+      #photoPanel{
+          border: solid black 1px;
+      }
+      #familyTree > div{
+          margin-top: 30px;
+
+      }
+      #familyTree{
+          
+          background: url('../img/backgroundTree.png') no-repeat ;
+          background-size: contain;
+      }

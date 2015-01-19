@@ -25,7 +25,18 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
             case 'drawMode':
                 $( ".draggable" ).draggable({ revert: "invalid" });
                 $( ".droppable" ).droppable({
+                    drop: function(event, ui) {
 
+                    }
+                });
+                break;
+            case 'treeMode':
+                $( ".draggable" ).draggable({ revert: "invalid" });
+                $( ".droppable" ).droppable({
+                    drop: function(event, ui) {
+                        $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
+                        $(ui.draggable).remove();
+                    }
                 });
             break;
         }

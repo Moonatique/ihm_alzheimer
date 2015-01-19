@@ -2,7 +2,7 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('ihmAlzheimerApp', [
+var app = angular.module('ihmAlzheimerApp', [
   'ngRoute',
   'phonecatAnimations',
   'phonecatControllers',
@@ -13,7 +13,7 @@ var phonecatApp = angular.module('ihmAlzheimerApp', [
   'ui.bootstrap'
 ]);
 
-phonecatApp.config(['$routeProvider',
+app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
             when('/phones', {
@@ -36,29 +36,3 @@ phonecatApp.config(['$routeProvider',
                 redirectTo: '/'
             });
     }]);
-
-/*
-var phonecatApp = angular.module('phonecatApp', [
-    'ngRoute',
-    'phonecatAnimations',
-    'phonecatControllers',
-    'phonecatFilters',
-    'phonecatServices'
-]);
-
-phonecatApp.config(['$routeProvider',
-    function($routeProvider) {
-        $routeProvider.
-            when('/phones', {
-                templateUrl: 'content/partials/phone-list.html',
-                controller: 'PhoneListCtrl'
-            }).
-            when('/phones/:phoneId', {
-                templateUrl: 'content/partials/phone-detail.html',
-                controller: 'PhoneDetailCtrl'
-            }).
-            otherwise({
-                redirectTo: '/phones'
-            });
-    }]);
-*/
