@@ -10,9 +10,9 @@
             <img src="img/family_tree.png" class="img-thumbnail" alt="jeuFamille">
         </a>
 
-        <div class="panel panel-primary col-sm-7" ng-show="currentState==='drawMode'" >
-            <div ng-repeat="sticker in stickers">
-                <a id="{{sticker.id}}" class="navbar-brand col-sm-1 sticker draggable" href="#/albums/{{album.id}}" >
+        <div class="panel panel-primary col-sm-6 droppable" ng-show="currentState==='drawMode'" >
+            <div ng-repeat="sticker in stickers" class="draggable">
+                <a id="{{sticker.id}}" class="navbar-brand col-sm-1 sticker" href="#/albums/{{album.id}}" >
                     <img  src="{{sticker.url}}" class="img-thumbnail" alt="jeuFamille">
                 </a>
             </div>
@@ -27,11 +27,11 @@
         </div>
 
 
-        <h1 id="albumTitle" class="text-center col-sm-2" ng-class="{'col-sm-3':currentState==='drawMode', 'col-sm-6':currentState!=='drawMode'}"><strong>{{album.title}}</strong></h1>
+        <h1 id="albumTitle" class="text-center col-sm-3" ng-class="{'col-sm-3':currentState==='drawMode', 'col-sm-6':currentState!=='drawMode'}"><strong>{{album.title}}</strong></h1>
         
     </nav>
 
-    <section row ng-hide="currentState!=='displayMode'">
+    <section class="row" ng-hide="currentState!=='displayMode'">
         <div>
             <div class="col-sm-12" style="height: 30%">
                 <carousel interval="myInterval">
@@ -44,7 +44,7 @@
         </div>
     </section>
 
-    <section row ng-hide="currentState!=='drawMode'" >
+    <section class="row" ng-hide="currentState!=='drawMode'" >
         
             <div id="drawingImage" class="col-sm-12 droppable">
                 <img src="img/family.jpg">
@@ -52,16 +52,23 @@
 
     </section>
 
-    <section row ng-hide="currentState!=='treeMode'">
-        <div>
-            <div class="col-sm-12" style="height: 30%">
-                <carousel interval="myInterval">
-                    <slide ng-repeat="slide in slides" active="slide.active">
-                        <img ng-src="{{slide.image}}" style="margin:auto;">
-                        
-                    </slide>
-                </carousel>
+    <section class="row" ng-hide="currentState!=='treeMode'">
+        <div class="col-sm-8">
+            <div class="row">
+                <div id="pereDery">
+                    <img src="img/family.jpg" class="img-thumbnail">
+                </div>
+                <div>
+                    <span class="glyphicon glyphicon-minus btn-lg" aria-hidden="true"></span>
+                </div>
             </div>
+
+            <div class="row">
+            </div>
+            
+        </div>
+
+        <div class="col-sm-4">
         </div>
     </section>
 

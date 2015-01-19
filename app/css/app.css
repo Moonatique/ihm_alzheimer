@@ -132,6 +132,7 @@ ul.specs dt {
       }
       .panel{
         margin: 1%;
+        max-height: 75px;
       }
       #bannerAlbum > a{
         height: 90%;
