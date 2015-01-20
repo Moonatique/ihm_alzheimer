@@ -157,11 +157,11 @@ ul.specs dt {
           border: solid black 1px;
       }
       #familyTree > div{
-          margin-top: 30px;
+          margin-top: 40px;
 
       }
       #familyTree{
-
-          background: url('../img/backgroundTree.png') no-repeat ;
+          background: url('../img/arbres_ihm/level1BG.png') no-repeat ;
           background-size: contain;
+
       }
