@@ -13,9 +13,31 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
     $scope.addSlide();
   }
   $scope.stickers = Sticker.query();
+  var game = {
+    'lvl1' : 2,
+    'lvl2' : 6,
+    'lvl3' : 12
+  };
+  var score = 0;
+  $scope.gameState = 'lvl1';
+  var scorePlusOne = function(){
+
+    score++;
+    switch($scope.gameState){
+      case 'lvl1':
+      if(score === game['lvl1']){alert('GG');gameState='lvl2';}
+      break;
+      case 'lvl2':
+      if(score === game['lvl2']){gameState='lvl3';}
+      break;
+      case 'lvl3':
+      if(score === game['lvl3']){alert("GG!");}
+      break;
+    }
+  }
+
   $scope.currentState = 'displayMode';
   $scope.changeState = function(state){
-
     if($scope.currentState === state ){
       $scope.currentState = 'displayMode';
     }
@@ -32,10 +54,20 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
                 break;
             case 'treeMode':
                 $( ".draggable" ).draggable({ revert: "invalid" });
-                $( ".droppable" ).droppable({
+                $( ".droppable#fille1" ).droppable({ 
+                    accept: "#fille1",
                     drop: function(event, ui) {
                         $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
                         $(ui.draggable).remove();
+                        scorePlusOne();                        
+                    }
+                });
+                $( ".droppable#fille2" ).droppable({ 
+                    accept: "#fille2",
+                    drop: function(event, ui) {
+                        $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
+                        $(ui.draggable).remove();
+                        scorePlusOne();
                     }
                 });
             break;
