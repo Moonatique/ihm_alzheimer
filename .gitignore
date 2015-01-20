@@ -1,3 +1,5 @@
 .idea/
 node_modules/
 bower_components/
+app/img/Thumbs.db
+app/img/phones/Thumbs.db
