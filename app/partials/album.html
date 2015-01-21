@@ -1,0 +1,197 @@
+<div class="container">
+    <nav id="bannerAlbum" class="navbar navbar-default row">
+        <a class="navbar-brand col-sm-2 icons" href="#/menu" role="button">
+            <img src="img/home.jpg" class="img-thumbnail" alt="jeuFamille">
+        </a>
+        <a class="navbar-brand col-sm-2 icons paintBrush" ng-click="changeState('drawMode')" href="#/albums/{{album.id}}" ng-hide="currentState==='treeMode'">
+            <img src="img/paintbrush.png" class="img-thumbnail" alt="jeuFamille">
+        </a>
+        <a class="navbar-brand col-sm-2 icons" href="#/albums/{{album.id}}" ng-hide="currentState==='drawMode'" ng-click="changeState('treeMode')">
+            <img src="img/family_tree.png" class="img-thumbnail" alt="jeuFamille">
+        </a>
+
+        <div class="panel panel-primary col-sm-6 droppable" ng-show="currentState==='drawMode'" >
+            <div ng-repeat="sticker in stickers" class="draggable">
+                <a id="{{sticker.id}}" class="navbar-brand col-sm-1 sticker" href="#/albums/{{album.id}}" >
+                    <img  src="{{sticker.url}}" class="img" alt="jeuFamille">
+                </a>
+            </div>
+            <!--<div class="panel panel-primary col-sm-offset-2 col-sm-3"  id="controlDraw">-->
+                <a class="navbar-brand col-sm-1 col-sm-offset-2 sticker" href="#/albums/{{album.id}}" >
+                    <img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
+                </a>
+                <a class="navbar-brand col-sm-1 sticker" href="#/albums/{{album.id}}" >
+                    <img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
+                </a>
+            <!--</div>-->
+        </div>
+
+
+        <h1 id="albumTitle" class="text-center col-sm-3" ng-class="{'col-sm-3':currentState==='drawMode', 'col-sm-6':currentState!=='drawMode'}"><strong>{{album.title}}</strong></h1>
+        
+    </nav>
+
+    <section class="row" ng-hide="currentState!=='displayMode'">
+        <div>
+            <div class="col-sm-12" style="height: 30%">
+                <carousel interval="myInterval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </section>
+
+    <section class="row" ng-hide="currentState!=='drawMode'" >
+        
+            <div id="drawingImage" class="col-sm-12 droppable">
+                <img src="img/family.jpg">
+            </div>
+
+    </section>
+
+    <section class="row" ng-hide="currentState!=='treeMode'" >
+        <div class="col-sm-8" id="familyTree1" ng-hide="gameState!=='lvl1'">
+            <div class="row" >
+                <div id="pereDery" class="col-sm-offset-3 col-sm-3 ">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Père Dery</strong>
+                    </h4>
+                </div>
+                <div id="pereDery" class="col-sm-3 col-sm-offset-2">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Mère Dery</strong>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="fille1" class="col-sm-3 col-sm-offset-4 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Dery</strong>
+                    </h4>
+                </div>
+                <div id="fille2" class="col-sm-3 col-sm-offset-0 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Soeur Dery</strong>
+                    </h4>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-sm-9" id="familyTree2" ng-hide="gameState!=='lvl2'">
+            <div class="row" >
+                <div id="mari1" class="col-sm-offset-0 col-sm-3 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Mari Dery</strong>
+                    </h4>
+                </div>
+                <div id="dery" class="col-sm-3 col-sm-offset-0">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Dery</strong>  
+                    </h4>
+                </div>
+                <div id="mari2" class="col-sm-3 col-sm-offset-0 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Mari soeur Dery</strong>
+                    </h4>
+                </div>
+                <div id="soeurDery" class="col-sm-3 col-sm-offset-0">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Soeur Dery</strong>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="pfille1" class="col-sm-3 col-sm-offset-2 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>enfant1</strong>
+                    </h4>
+                </div>
+                <div id="pfille2" class="col-sm-3 col-sm-offset-2 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>enfant2</strong>
+                    </h4>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-sm-8" id="familyTree3" ng-hide="gameState!=='lvl3'">
+            <div class="row" >
+                <div id="pereDery" class="col-sm-offset-3 col-sm-3 ">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Père Dery</strong>
+                    </h4>
+                </div>
+                <div id="pereDery" class="col-sm-3 col-sm-offset-2">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Mère Dery</strong>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="fille1" class="col-sm-3 col-sm-offset-4 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Dery</strong>
+                    </h4>
+                </div>
+                <div id="fille2" class="col-sm-3 col-sm-offset-0 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Soeur Dery</strong>
+                    </h4>
+                </div>
+            </div>
+            
+        </div>
+
+            <div id="photoPanel" class="col-sm-3">
+                <div id="fille1" class="col-sm-6 draggable" ng-hide="gameState!=='lvl1'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+                <div id="fille2" class="col-sm-6 draggable" ng-hide="gameState!=='lvl1'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+
+
+                <div id="pfille1" class="col-sm-6 draggable" ng-hide="gameState!=='lvl2'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+                <div id="pfille2" class="col-sm-6 draggable" ng-hide="gameState!=='lvl2'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+                <div id="mari1" class="col-sm-6 draggable" ng-hide="gameState!=='lvl2'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+                <div id="mari2" class="col-sm-6 draggable" ng-hide="gameState!=='lvl2'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+
+
+               
+            </div>
+        
+    </section>
+
+
+
+</div>
