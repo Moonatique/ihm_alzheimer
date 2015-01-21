@@ -1,0 +1,32 @@
+
+
+<a class="navbar-brand col-sm-2 icons" href="#/menu" role="button">
+	<img src="img/home.jpg" class="img-thumbnail" alt="jeuFamille">
+</a>
+		
+<a class="navbar-brand col-sm-2 icons paintBrush" ng-click="$parent.changeState('drawMode')" href="#/albums/{{album.id}}" ng-hide="$parent.currentState==='treeMode'">
+	<img src="img/paintbrush.png" class="img-thumbnail" alt="jeuFamille">
+</a>
+		
+<a class="navbar-brand col-sm-2 icons" href="#/albums/{{album.id}}" ng-hide="$parent.currentState==='drawMode'" ng-click="$parent.changeState('treeMode')">
+	<img src="img/family_tree.png" class="img-thumbnail" alt="jeuFamille">
+</a>
+
+<div class="panel panel-primary col-sm-6 droppable" ng-show = "$parent.currentState==='drawMode'" >
+	<div ng-repeat="sticker in stickers" class="draggable">
+		<a id="{{sticker.id}}" class="navbar-brand col-sm-1 sticker" href="#/albums/{{album.id}}" >
+			<img  src="{{sticker.url}}" class="img" alt="jeuFamille">
+		</a>
+	</div>
+	<!--<div class="panel panel-primary col-sm-offset-2 col-sm-3"  id="controlDraw">-->
+	<a class="navbar-brand col-sm-1 col-sm-offset-2 sticker" href="#/albums/{{album.id}}" >
+		<img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
+	</a>
+	<a class="navbar-brand col-sm-1 sticker" href="#/albums/{{album.id}}" >
+		<img src="img/mustache.png" class="img-thumbnail" alt="jeuFamille">
+	</a>
+	<!--</div>-->
+</div>
+
+
+

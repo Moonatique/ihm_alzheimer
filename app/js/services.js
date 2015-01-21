@@ -5,7 +5,7 @@ var services = angular.module('ihm_alzheimer_services', ['ngResource']);
 
 services.factory('Album', ['$resource',
     function($resource){
-        return $resource('content/album/:albumId.json', {}, {
+        return $resource('content/menu/:albumId.json', {}, {
             query: {method:'GET', params:{albumId:'albums'}, isArray:true}
         });
     }])
