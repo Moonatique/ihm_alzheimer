@@ -157,11 +157,19 @@ ul.specs dt {
           border: solid black 1px;
           min-height: 75px;
       }
-      #familyTree > div{
+      #familyTree1 > div, #familyTree2 > div, #familyTree3 > div{
           margin-top: 40px;
 
       }
-      #familyTree{
+      #familyTree1 {
+          background: url('../img/arbres_ihm/level1BG.png') no-repeat ;
+          background-size: contain;
+      }
+       #familyTree2 {
+          background: url('../img/arbres_ihm/level2BG.png') no-repeat ;
+          background-size: contain;
+      }
+       #familyTree3 {
           background: url('../img/arbres_ihm/level1BG.png') no-repeat ;
           background-size: contain;
           /*border: solid black 1px;*/

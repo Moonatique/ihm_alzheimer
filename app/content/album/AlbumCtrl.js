@@ -25,10 +25,10 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
     score++;
     switch($scope.gameState){
       case 'lvl1':
-      if(score === game['lvl1']){alert('GG');gameState='lvl2';}
+      if(score === game['lvl1']){$scope.gameState='lvl2';location.reload();}
       break;
       case 'lvl2':
-      if(score === game['lvl2']){gameState='lvl3';}
+      if(score === game['lvl2']){$scope.gameState='lvl3';}
       break;
       case 'lvl3':
       if(score === game['lvl3']){alert("GG!");}

@@ -52,8 +52,8 @@
 
     </section>
 
-    <section class="row" ng-hide="currentState!=='treeMode'">
-        <div class="col-sm-8" id="familyTree">
+    <section class="row" ng-hide="currentState!=='treeMode'" >
+        <div class="col-sm-8" id="familyTree1" ng-hide="gameState!=='lvl1'">
             <div class="row" >
                 <div id="pereDery" class="col-sm-offset-3 col-sm-3 ">
                     <img src="img/question_mark.jpg" class="img-thumbnail">
@@ -86,16 +86,110 @@
             
         </div>
 
-        <div id="photoPanel" class="col-sm-3">
-            <div id="fille1" class="col-sm-6 draggable">
-                <img src="img/dices.jpg" class="img-thumbnail">
+        <div class="col-sm-9" id="familyTree2" ng-hide="gameState!=='lvl2'">
+            <div class="row" >
+                <div id="mari1" class="col-sm-offset-0 col-sm-3 ">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Mari Dery</strong>
+                    </h4>
+                </div>
+                <div id="dery" class="col-sm-3 col-sm-offset-0">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Dery</strong>  
+                    </h4>
+                </div>
+                <div id="mari2" class="col-sm-3 col-sm-offset-0">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Mari soeur Dery</strong>
+                    </h4>
+                </div>
+                <div id="soeurDery" class="col-sm-3 col-sm-offset-0">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Soeur Dery</strong>
+                    </h4>
+                </div>
             </div>
-            <div id="fille2" class="col-sm-6 draggable">
-                <img src="img/dices.jpg" class="img-thumbnail">
+
+            <div class="row">
+                <div id="pfille1" class="col-sm-3 col-sm-offset-2 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>enfant1</strong>
+                    </h4>
+                </div>
+                <div id="pfille2" class="col-sm-3 col-sm-offset-2 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>enfant2</strong>
+                    </h4>
+                </div>
             </div>
-           
-            </div>
+            
         </div>
+
+        <div class="col-sm-8" id="familyTree3" ng-hide="gameState!=='lvl3'">
+            <div class="row" >
+                <div id="pereDery" class="col-sm-offset-3 col-sm-3 ">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Père Dery</strong>
+                    </h4>
+                </div>
+                <div id="pereDery" class="col-sm-3 col-sm-offset-2">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Mère Dery</strong>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="fille1" class="col-sm-3 col-sm-offset-4 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Dery</strong>
+                    </h4>
+                </div>
+                <div id="fille2" class="col-sm-3 col-sm-offset-0 droppable">
+                    <img src="img/question_mark.jpg" class="img-thumbnail">
+                    <h4 class="text-center">
+                        <strong>Soeur Dery</strong>
+                    </h4>
+                </div>
+            </div>
+            
+        </div>
+
+            <div id="photoPanel" class="col-sm-3">
+                <div id="fille1" class="col-sm-6 draggable" ng-hide="gameState!=='lvl1'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+                <div id="fille2" class="col-sm-6 draggable" ng-hide="gameState!=='lvl1'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+
+
+                <div id="pfille1" class="col-sm-6 draggable" ng-hide="gameState!=='lvl2'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+                <div id="pfille2" class="col-sm-6 draggable" ng-hide="gameState!=='lvl2'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+                <div id="mari1" class="col-sm-6 draggable" ng-hide="gameState!=='lvl2'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+                <div id="mari2" class="col-sm-6 draggable" ng-hide="gameState!=='lvl2'">
+                    <img src="img/dices.jpg" class="img-thumbnail">
+                </div>
+
+
+               
+            </div>
+        
     </section>
 
 
