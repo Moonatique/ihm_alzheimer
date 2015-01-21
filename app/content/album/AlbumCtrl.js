@@ -28,7 +28,7 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
       if(score === game['lvl1']){$scope.gameState='lvl2';$scope.$apply();}
       break;
       case 'lvl2':
-      if(score === game['lvl2']){$scope.gameState='lvl3';}
+      if(score === game['lvl2']){$scope.gameState='lvl3';alert("GG!");}
       break;
       case 'lvl3':
       if(score === game['lvl3']){alert("GG!");}
@@ -54,6 +54,7 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
                 break;
             case 'treeMode':
                 $( ".draggable" ).draggable({ revert: "invalid" });
+                //zone dropables Level1 
                 $( ".droppable#fille1" ).droppable({ 
                     accept: "#fille1",
                     drop: function(event, ui) {
@@ -70,6 +71,41 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
                         scorePlusOne();
                     }
                 });
+
+                //zone droppable Level2
+                $( ".droppable#mari1" ).droppable({ 
+                    accept: "#mari1",
+                    drop: function(event, ui) {
+                        $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
+                        $(ui.draggable).remove();
+                        scorePlusOne();
+                    }
+                });
+                $( ".droppable#mari2" ).droppable({ 
+                    accept: "#mari2",
+                    drop: function(event, ui) {
+                        $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
+                        $(ui.draggable).remove();
+                        scorePlusOne();
+                    }
+                });
+                $( ".droppable#pfille1" ).droppable({ 
+                    accept: "#pfille1",
+                    drop: function(event, ui) {
+                        $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
+                        $(ui.draggable).remove();
+                        scorePlusOne();
+                    }
+                });
+                $( ".droppable#pfille2" ).droppable({ 
+                    accept: "#pfille2",
+                    drop: function(event, ui) {
+                        $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
+                        $(ui.draggable).remove();
+                        scorePlusOne();
+                    }
+                });
+
             break;
         }
     }
