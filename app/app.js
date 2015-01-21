@@ -13,11 +13,11 @@ app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
             when('/',{
-                templateUrl: 'partials/menu.html',
+                templateUrl: 'content/menu/menu.html',
                 controller: 'MenuCtrl'
             }).
             when('/albums/:albumId',{
-                templateUrl: 'partials/album.html',
+                templateUrl: 'content/album/album.html',
                 controller: 'AlbumCtrl'
             }).
             otherwise({
