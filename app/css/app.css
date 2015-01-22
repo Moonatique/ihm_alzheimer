@@ -162,11 +162,13 @@ ul.specs dt {
 
       }
       #familyTree1 {
-          background: url('../img/arbres_ihm/level1BG.png') no-repeat ;
+          /*background: url('../img/arbres_ihm/level1BG.png') no-repeat ;*/
+          background: url('../img/arbres_ihm/level1BG.PNG') no-repeat ;
           background-size: contain;
       }
        #familyTree2 {
-          background: url('../img/arbres_ihm/level2BG.png') no-repeat ;
+           background: url('../img/arbres_ihm/level2BG.PNG') no-repeat ;
+          /*background: url('../img/arbres_ihm/level2BG.png') no-repeat ;*/
           background-size: contain;
       }
        #familyTree3 {
