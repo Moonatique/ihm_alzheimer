@@ -1,50 +1,31 @@
 [
     {
         "id": "1",
-        "imageUrl": "img/children.jpg",
-        "title": "Petits Enfants",
-        "description": "familyPhoto1"
+        "imageUrl": "img/souvenir/souvenir1.png",
+        "title": "Souvenirs",
+        "description": "familyPhoto1",
+        "slides" : ["img/souvenir/souvenir1.png", "img/souvenir/souvenir2.png","img/souvenir/souvenir3.png"]
+        
     },
     {
         "id": "2",
-        "imageUrl": "img/rome.jpg",
-        "title": "Vacances a Rome",
-        "description": "familyPhoto2"
+        "imageUrl": "img/mariageFabien/mariageF1.png",
+        "title": "Mariage de Fabien et Elyse",
+        "description": "familyPhoto2",
+        "slides" : ["img/mariageFabien/mariageF1.png", "img/mariageFabien/mariageF2.png"]
     },
     {
         "id": "3",
-        "imageUrl": "img/mariage.jpg",
-        "title": "Mariage",
-        "description": "familyPhoto3"
+        "imageUrl": "img/virginie/virginie1.png",
+        "title": "Photos avec Virginie",
+        "description": "familyPhoto3",
+        "slides" : ["img/virginie/virginie1.png","img/virginie/virginie2.png","img/virginie/virginie3.png","img/virginie/virginie4.png","img/virginie/virginie5.png"]
     },
     {
         "id": "4",
         "imageUrl": "img/mariage_marine.jpg",
         "title": "Mariage de marine",
         "description": "familyPhoto"
-    },
-    {
-        "id": "5",
-        "imageUrl": "img/christmasfamily.jpg",
-        "title": "Noel 2000",
-        "description": "familyPhoto"
-    },
-    {
-        "id": "6",
-        "imageUrl": "img/birthday.jpg",
-        "title": "Anniversaire Jean",
-        "description": "familyPhoto"
-    },
-    {
-        "id": "7",
-        "imageUrl": "img/family_dinner.jpg",
-        "title": "Repas de famille Mars",
-        "description": "familyPhoto"
-    },
-    {
-        "id": "8",
-        "imageUrl": "img/zoo.jpg",
-        "title": "Zoo",
-        "description": "familyPhoto"
     }
+    
 ]

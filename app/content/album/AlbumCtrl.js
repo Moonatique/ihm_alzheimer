@@ -1,21 +1,24 @@
 angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Sticker, Album, $routeParams) {
 
-
+    var slides = $scope.slides = [];
     var albums = Album.query(function(albums){
         $scope.album = albums[$routeParams.albumId-1];
+        addSlide();
+        
     });
 
-  var slides = $scope.slides = [];
-  $scope.addSlide = function() {
-    var newWidth = 600 + slides.length + 1;
-    slides.push({
+ // var slides = $scope.slides = [];
+   var addSlide = function() {
+    for(var i=0;i<$scope.album.slides.length;i++){
+      slides.push({
       //image: 'http://placekitten.com/' + newWidth + '/300'
-        image: 'http://placekitten.com/' + newWidth + '/300'
+        image: $scope.album.slides[i]
     });
+    }
+    
   };
-  for (var i=0; i<4; i++) {
-    $scope.addSlide();
-  }
+  
+  
   $scope.stickers = Sticker.query();
   var game = {
     'lvl1' : 2,
@@ -55,6 +58,7 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
 
                     }
                 });
+                $scope.currentImageUrl = $("carousel active").find("img").attr("src");
                 break;
             case 'treeMode':
                 $( ".draggable" ).draggable({ revert: "invalid" });
