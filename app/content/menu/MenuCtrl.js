@@ -8,6 +8,6 @@ angular.module('ihmAlzheimerApp').
             $scope.currentDate = new Date();
             $scope.randomAlbum=1;
             $scope.getRandom = function(){
-                $scope.randomAlbum=Math.floor(Math.random()*8)+1;
+                $scope.randomAlbum=Math.floor(Math.random()*4)+1;
             }
         }]);

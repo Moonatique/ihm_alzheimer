@@ -20,12 +20,6 @@
         "title": "Photos avec Virginie",
         "description": "familyPhoto3",
         "slides" : ["img/virginie/virginie1.png","img/virginie/virginie2.png","img/virginie/virginie3.png","img/virginie/virginie4.png","img/virginie/virginie5.png"]
-    },
-    {
-        "id": "4",
-        "imageUrl": "img/mariage_marine.jpg",
-        "title": "Mariage de marine",
-        "description": "familyPhoto"
     }
     
 ]
