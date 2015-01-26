@@ -58,7 +58,7 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
 
                     }
                 });
-                $scope.currentImageUrl = $("carousel active").find("img").attr("src");
+                $scope.currentImageUrl = $(".carousel .active").find("img").attr("src");
                 break;
             case 'treeMode':
                 $( ".draggable" ).draggable({ revert: "invalid" });
