@@ -172,7 +172,12 @@ ul.specs dt {
           background-size: contain;
       }
        #familyTree3 {
-          background: url('../img/arbres_ihm/level1BG.png') no-repeat ;
+          background: url('../img/arbres_ihm/level3BG.png') no-repeat ;
           background-size: contain;
-          /*border: solid black 1px;*/
+      }
+
+      .carousel img{
+        height: 350px;
+        width: 600px;
+
       }

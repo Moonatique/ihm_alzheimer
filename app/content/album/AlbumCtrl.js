@@ -23,7 +23,7 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
   var game = {
     'lvl1' : 2,
     'lvl2' : 6,
-    'lvl3' : 12
+    'lvl3' : 8
   };
   var score = 0;
   $scope.gameState = 'lvl1';
@@ -35,10 +35,10 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
       if(score === game['lvl1']){$scope.gameState='lvl2';$scope.$apply();}
       break;
       case 'lvl2':
-      if(score === game['lvl2']){$scope.gameState='lvl3';alert("GG!");}
+      if(score === game['lvl2']){$scope.gameState='lvl3';$scope.$apply();}
       break;
       case 'lvl3':
-      if(score === game['lvl3']){alert("GG!");}
+      if(score === game['lvl3']){alert("bravo");}
       break;
     }
   }
@@ -107,6 +107,24 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
                 });
                 $( ".droppable#pfille2" ).droppable({ 
                     accept: "#pfille2",
+                    drop: function(event, ui) {
+                        $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
+                        $(ui.draggable).remove();
+                        scorePlusOne();
+                    }
+                });
+
+                //zone droppable Level3
+                $( ".droppable#woman1" ).droppable({ 
+                    accept: "#woman1",
+                    drop: function(event, ui) {
+                        $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
+                        $(ui.draggable).remove();
+                        scorePlusOne();
+                    }
+                });
+                $( ".droppable#apfille1" ).droppable({ 
+                    accept: "#apfille1",
                     drop: function(event, ui) {
                         $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
                         $(ui.draggable).remove();
