@@ -22,8 +22,9 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
   $scope.stickers = Sticker.query();
   var game = {
     'lvl1' : 2,
-    'lvl2' : 6,
-    'lvl3' : 12
+    'lvl2' : 4,
+    'lvl3' : 6,
+    'lvl4' : 8
   };
   var score = 0;
   $scope.gameState = 'lvl1';
@@ -35,13 +36,19 @@ angular.module('ihmAlzheimerApp').controller('AlbumCtrl', function ($scope, Stic
       if(score === game['lvl1']){$scope.gameState='lvl2';$scope.$apply();}
       break;
       case 'lvl2':
-      if(score === game['lvl2']){$scope.gameState='lvl3';alert("GG!");}
+      if(score === game['lvl2']){$scope.gameState='lvl3';$scope.$apply();}
       break;
       case 'lvl3':
-      if(score === game['lvl3']){alert("GG!");}
+      if(score === game['lvl3']){$scope.gameState='lvl4';alert('GG');}
       break;
+      /*
+      case 'lvl4':
+      if(score === game['lvl4']){}
+      break;
+      */
     }
   }
+
 
   $scope.currentState = 'displayMode';
   $scope.changeState = function(state){
